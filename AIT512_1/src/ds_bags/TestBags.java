@@ -5,7 +5,7 @@
 
 package ds_bags;
 
-//adding a temporary comment
+//adding a temporary comment here to test GitHub
 public class TestBags<T> {
     private T[] bag;
     private int numberOfElements;
@@ -38,8 +38,8 @@ public class TestBags<T> {
     }
 
     public static void alsoTestFixedCapacityBag(String[] items) {
-        System.out.println("Create an empty bag of strings with capacity 5");
-        TestBags<String> bag = new TestBags<>(5);
+        System.out.println("Create an empty bag of strings with capacity "+ items.length);
+        TestBags<String> bag = new TestBags<>(items.length);
         System.out.println ("Bag: "+bag.toString());
         System.out.println("Bag is singleton:"+bag.isSingleton());
 
@@ -52,7 +52,7 @@ public class TestBags<T> {
     }
 
     public static void main(String[] args) {
-        System.out.println("Fixed Capacity Bag - Task 3 - Jeffrey Wise");
+        System.out.println("Fixed Capacity Bag - Task 1 - Jeffrey Wise");
         // your test goes here
         
         String[] items = {"book", "bag", "computer", "phone", "key"};
