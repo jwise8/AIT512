@@ -5,7 +5,9 @@
 
 package ds_bags;
 
-public class FixedCapacityBag<T> {
+import java.util.Iterator;
+
+public class FixedCapacityBag<T> implements Bag<T>{
     private T[] bag;
     private int numberOfElements;
 
@@ -23,10 +25,7 @@ public class FixedCapacityBag<T> {
         }
     }
 
-    public boolean isSingleton() {
-        return numberOfElements == 1;
-    }
-
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -57,4 +56,16 @@ public class FixedCapacityBag<T> {
         String[] items2 = {"book", "bag", "computer", "phone", "key", "money"};
         alsoTestFixedCapacityBag(items2);
     }
+
+	@Override
+	public Iterator<T> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return numberOfElements;
+	}
 }

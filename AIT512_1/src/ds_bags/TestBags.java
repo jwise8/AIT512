@@ -24,9 +24,9 @@ public class TestBags<T> {
         }
     }
 
-    public boolean isSingleton() {
+    /*public boolean isSingleton() {
         return numberOfElements == 1;
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -37,17 +37,20 @@ public class TestBags<T> {
         return sb.toString();
     }
 
-    public static void alsoTestFixedCapacityBag(String[] items) {
+    public void alsoTestFixedCapacityBag(String[] items) {
         System.out.println("Create an empty bag of strings with capacity "+ items.length);
-        TestBags<String> bag = new TestBags<>(items.length);
+        //this.bag = new TestBags<>(items.length);
+        DynamicCapacityBag<String> bag = new DynamicCapacityBag<>(items.length); //instead of hardcoding to 5, set dynamiclly
+
         System.out.println ("Bag: "+bag.toString());
         System.out.println("Bag is singleton:"+bag.isSingleton());
-
+        System.out.println("Bag is isEmpty:"+bag.isEmpty());
         for (String item : items) {
             System.out.println("Add the item: " + item);
-            bag.add(item);
+            bag.add( item);
             System.out.println("Bag: "+bag.toString());
             System.out.println("Bag is singleton: "+bag.isSingleton());
+            System.out.println("Bag is isEmpty: "+bag.isEmpty());
         }
     }
 
@@ -56,7 +59,8 @@ public class TestBags<T> {
         // your test goes here
         
         String[] items = {"book", "bag", "computer", "phone", "key"};
-        alsoTestFixedCapacityBag(items);
+        TestBags<String> testBags =new TestBags<>(items.length);
+        testBags.alsoTestFixedCapacityBag(items);
     }
 }
 

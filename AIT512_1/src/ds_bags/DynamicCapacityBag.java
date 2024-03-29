@@ -50,11 +50,7 @@ public class DynamicCapacityBag<Item> implements Bag<Item> {
 		elements[numberOfElements++]=item;
 	}
 
-	@Override
-	public boolean isEmpty() {
-		return numberOfElements==0;
-	}
-
+	
 	@Override
 	public int size() {
 		return numberOfElements;

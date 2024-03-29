@@ -9,6 +9,9 @@ package ds_bags;
  */
 public interface Bag<Item> extends Iterable<Item> {
 
+	default boolean isSingleton () {
+		return this.size ()== 1;
+	}
 	/**
 	 * adds item to the bag. duplicate allowed
 	 * @param item
@@ -19,7 +22,9 @@ public interface Bag<Item> extends Iterable<Item> {
 	 * check if the bag is has a single element - has size one.
 	 * @return true for an bag has single element. 
 	 */
-	public boolean isEmpty();
+	default boolean isEmpty() {
+	return this.size ()== 0;		
+	}
 	/**
 	 * the number of elements in a bag is named the size of the bag. 
 	 * @return the size of the bag
