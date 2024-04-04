@@ -6,7 +6,7 @@ package ds_bags;
 import java.util.Iterator;
 
 /**
- * a Bag with a dynamic capacity. the capacity is modified based on the current number of elements
+ *
  * @author Jeffrey Wise
  */
 public class DynamicCapacityBag<Item> implements Bag<Item> {

@@ -55,10 +55,10 @@ public class TestBags<T> {
     }
 
     public static void main(String[] args) {
-        System.out.println("Fixed Capacity Bag - Task 1 - Jeffrey Wise");
+        System.out.println("Dynamic Capacity Bag - Task 2 - Jeffrey Wise");
         // your test goes here
         
-        String[] items = {"book", "bag", "computer", "phone", "key"};
+        String[] items = {"book", "bag", "computer", "phone", "key", "money"};
         TestBags<String> testBags =new TestBags<>(items.length);
         testBags.alsoTestFixedCapacityBag(items);
     }
